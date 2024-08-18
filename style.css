@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #D8DFE8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: consolas;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.logo {
+    max-width: 50%;
+}
+
+.container {
+    width: 90%; 
+    max-width: 1000px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 20px; 
+}
+
+.container .card {
+    position: relative;
+    flex: 1 1 300px;
+    max-width: 300px;
+}
+
+.container .card .face {
+    width: 100%;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1
+{
+    position: relative;
+    background: #D8DFE8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+} 
+
+.container .card:hover .face.face1
+{
+    background: #0A3871;
+    transform: translateX(0);
+}
+
+
+.container .card .face.face1 .content
+{
+    opacity: 0.2;
+    transition:  0.5s;
+}
+
+.container .card:hover .face.face1 .content
+{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img 
+{
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3 
+{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #131212;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2
+{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2 
+{
+   transform: translateY(0); 
+}
+
+.container .card .face.face2 textarea
+{
+    margin: 0; 
+    padding: 0;
+}
+.container .card .face.face2 .content a
+{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #D8DFE8;
+    padding: 5px;
+    border: 1px solid #D8DFE8;
+}
+
+.container .card .face.face2 .content a:hover 
+{
+    background: #D8DFE8;
+    color: #fff;
+} 
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .container .card {
+        width: 90%; /* Las tarjetas ocupan el 90% del ancho de la pantalla */
+        margin-bottom: 20px; /* Espacio entre tarjetas */
+    }
+}
+
+@media (max-width: 480px) {
+    .container .card .face.face1 .content h3 {
+        font-size: 1.2em; /* Reduce el tamaño de fuente en pantallas muy pequeñas */
+    }
+}
+
+.text-area1, .text-area2{
+    border: none;
+    color: #0A3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder {color: #0A3871;}
+    .text-area1:focus{
+        outline: none;
+    }
+::placeholder {color: #0A3871;}
+    .text-area2:focus{
+        outline: none;
+    }
+
+.mensaje{
+    width: 100%;
+    height: 100%;
+    background: white;
+    background-image: url(imagenes/muneco.png);
+    background-repeat: no-repeat;
+    border: none;
+}
+.informacion{
+    color: #495057;
+    font-size: 12px;
+}
+
+.botones{
+    display: flex;
+    margin-top: 18px;
+}
+
+.btn-desencriptar{
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 20%;
+    width: 100%;
+}
+
+.btn-encriptar{
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 20%;
+    width: 100%;
+}
+.copiar{
+    background-color: #0A3871;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 20%;
+    width: 100%;
+    margin-top: 20px;
+}
+footer {
+    width: 100%;
+    background-color: #0A3871;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+}

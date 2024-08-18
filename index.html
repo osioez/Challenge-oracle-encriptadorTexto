@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador y Desencriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Encriptador</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="imagenes/logoAlura.png" alt="logo de alura">
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="imagenes/design.png">
+                    <h3>Encripte</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <textarea class="text-area1" cols="30" rows="5" placeholder="Ingrese el texto aqui"></textarea>
+                    <div>
+                        <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
+                    </div>
+                    <div class="botones">
+                        <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="imagenes/code.png">
+                    <h3>Desencripte</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <textarea class="text-area2" cols="30" rows="5" placeholder="Ingrese el texto aqui"></textarea>
+                    <div>
+                        <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
+                    </div>
+                    <div class="botones">
+                        <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="face face1">
+                <div class="content">
+                    <img src="imagenes/launch.png">
+                    <h3>Resultado</h3>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content">
+                    <textarea class="mensaje" cols="30" rows="5"></textarea>
+                    <div>
+                        <button class="copiar" onclick="btnCopiar()">Copiar</button>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Carlos Mario Martínez González - Encriptador y Desencriptador de Mensajes</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
